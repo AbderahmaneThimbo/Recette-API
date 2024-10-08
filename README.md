@@ -18,7 +18,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 - **Node.js**
 - **MySQL**
 - **Postman** (pour tester l'API)
-- **Docker** (pour la containerisation)
+
 
 ## Installation
 
@@ -27,13 +27,13 @@ Suivez ces étapes pour configurer le projet sur votre machine locale :
 **Clonez le repository :**
 
 ```bash
-git clone https://github.com/AbderahmaneThimbo/gestion-recette-api.git
+git clone https://github.com/AbderahmaneThimbo/Recette-API.git
 ```
 
 **Accédez au dossier du projet :**
 
 ```bash
-cd gestion-recette-api
+cd Recette-API.git
 ```
 
 **Installez les dépendances :**
@@ -81,7 +81,7 @@ L'API sera accessible à `http://localhost:3000`.
   {
     "id": 2,
     "titre": "Poulet rôti",
-    "type": "Plat Principal",
+    "type": "Plat",
     "ingredients": "Poulet, Beurre, Ail, Herbes",
     "categorie_id": 2
   }
@@ -118,7 +118,7 @@ L'API sera accessible à `http://localhost:3000`.
 ```json
 {
   "titre": "Pizza améliorée",
-  "type": "Plat principal",
+  "type": "Plat",
   "ingrédients": "Tomates, Fromage, Pâte, Basilic",
   "categorie_id": 2
 }
@@ -240,31 +240,15 @@ npm run lint
 npm run format
 ```
 
-## Containerisation avec Docker
-
-Ce projet utilise **Docker** pour la containerisation, ce qui permet de déployer facilement l'API dans n'importe quel environnement.
-
-### Instructions pour Docker :
-
-1. **Lien vers l'image DockerHub** : [ lien image](https://hub.docker.com/r/harounatraore/recette)
-
-2. **Lancer les conteneurs Docker** :
-
-   ```bash
-   docker-compose up -d
-   ```
 
 ## Documentation et Collection Postman
 
 Pour tester les différents endpoints de l'API, vous pouvez utiliser la collection Postman incluse dans ce projet. Elle contient toutes les requêtes configurées pour interagir avec l'API.
 
-- **Exporter les collections** : `Gestion-recette.postman_collection.json` `Categorie.postman_collection.json`
+- **Exporter les collections** : `Gestion-recette-collection.json` `Categorie-collection.json`
 - **Importer dans Postman** et exécuter les requêtes.
 
 ## Auteur
 
 [Abderahmane Thimbo](https://github.com/AbderahmaneThimbo)
 
-## Contributeur
-
-[Harouna Traoré](https://github.com/HarounaTraore)

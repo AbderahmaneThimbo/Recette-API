@@ -14,7 +14,7 @@ describe("Recette tests", () => {
       recette.titre,
       recette.type,
       recette.ingredients,
-      recette.categorie_id
+      recette.categorie_id,
     );
 
     recetteId = result.insertId;
@@ -34,7 +34,7 @@ describe("Recette tests", () => {
       updatedRecette.titre,
       updatedRecette.type,
       updatedRecette.ingredients,
-      updatedRecette.categorie_id
+      updatedRecette.categorie_id,
     );
 
     expect(updateResult.affectedRows).toBe(1);
@@ -54,7 +54,7 @@ describe("Recette tests", () => {
       updatedRecette.titre,
       updatedRecette.type,
       updatedRecette.ingredients,
-      updatedRecette.categorie_id
+      updatedRecette.categorie_id,
     );
 
     expect(updateResult.affectedRows).toBe(0);

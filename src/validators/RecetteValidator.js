@@ -10,7 +10,7 @@ const addRequestValidator = [
     .withMessage("Titre est oblgatoire")
     .bail()
 
-    .isLength({ min: 5, max: 100  })
+    .isLength({ min: 5, max: 100 })
     .withMessage("Le titre doit contenir entre 5 et 100 caractères!")
     .bail()
 
@@ -21,7 +21,7 @@ const addRequestValidator = [
       }
       return true;
     }),
-  
+
   check("ingredients")
     .notEmpty()
     .withMessage("Ingredients ne peut pas être vide!")
@@ -29,7 +29,7 @@ const addRequestValidator = [
     .isLength({ min: 10, max: 500 })
     .withMessage("Les ingrédients doivent contenir entre 10 et 500 caractères")
     .bail(),
-  
+
   check("type")
     .notEmpty()
     .withMessage("Type ne peut pas être vide!")
@@ -37,7 +37,7 @@ const addRequestValidator = [
     .isIn(["Entrée", "Plat", "Dessert"])
     .withMessage('Le type doit être "Entrée", "Plat" ou "Dessert"')
     .bail(),
-  
+
   check("categorie_id")
     .notEmpty()
     .withMessage("L'id du categorie  est requis!")
@@ -72,12 +72,12 @@ const updateRequestValidator = [
       }
       return true;
     }),
-  
+
   check("titre")
     .notEmpty()
     .withMessage("Titre ne doit pas être vide")
     .bail()
-    .isLength({min: 5, max: 100})
+    .isLength({ min: 5, max: 100 })
     .withMessage("Le titre doit contenir entre 5 et 100 caractères")
     .bail()
     .custom(async (value) => {
@@ -87,7 +87,7 @@ const updateRequestValidator = [
       }
       return true;
     }),
-  
+
   check("ingredients")
     .notEmpty()
     .withMessage("Ingredients ne peut pas être vide!")
@@ -95,7 +95,7 @@ const updateRequestValidator = [
     .isLength({ min: 10, max: 500 })
     .withMessage("Les ingrédients doivent contenir entre 10 et 500 caractères")
     .bail(),
-  
+
   check("type")
     .notEmpty()
     .withMessage("Type ne peut pas être vide!")
@@ -103,7 +103,7 @@ const updateRequestValidator = [
     .isIn(["Entrée", "Plat", "Dessert"])
     .withMessage('Le type doit être "Entrée", "Plat" ou "Dessert"')
     .bail(),
-  
+
   check("categorie_id")
     .notEmpty()
     .withMessage("L'id du categorie  est requis!")
