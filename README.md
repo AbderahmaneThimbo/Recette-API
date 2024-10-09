@@ -97,7 +97,7 @@ L'API sera accessible à `http://localhost:3000`.
 {
   "titre": "Salade César",
   "type": "Entrée",
-  "ingrédients": "Laitue, Poulet, Parmesan, Croutons",
+  "ingredients": "Laitue, Poulet, Parmesan, Croutons",
   "categorie_id": 1
 }
 ```
@@ -119,7 +119,7 @@ L'API sera accessible à `http://localhost:3000`.
 {
   "titre": "Pizza améliorée",
   "type": "Plat",
-  "ingrédients": "Tomates, Fromage, Pâte, Basilic",
+  "ingredients": "Tomates, Fromage, Pâte, Basilic",
   "categorie_id": 2
 }
 ```

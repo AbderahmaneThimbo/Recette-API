@@ -29,7 +29,7 @@ CREATE TABLE `categories` (
   `nom` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `nom` (`nom`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,9 +57,9 @@ CREATE TABLE `recettes` (
   `ingredients` text NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `titre` (`titre`),
-  KEY `categorie_id` (`categorie_id`),
-  CONSTRAINT `recettes_ibfk_1` FOREIGN KEY (`categorie_id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `fk_categorie` (`categorie_id`),
+  CONSTRAINT `fk_categorie` FOREIGN KEY (`categorie_id`) REFERENCES `categories` (`id`) ON DELETE RESTRICT
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +68,7 @@ CREATE TABLE `recettes` (
 
 LOCK TABLES `recettes` WRITE;
 /*!40000 ALTER TABLE `recettes` DISABLE KEYS */;
-INSERT INTO `recettes` VALUES (4,1,'Tomato Bruschetta','Entrée','Tomatoes, Olive oil, Garlic, Basil, Bread'),(5,2,'Spaghetti Bolognese','Plat','Spaghetti, Ground beef, Tomato sauce, Garlic, Onion'),(6,4,'Mousse au chocolat ','Dessert','Chocolat noir, Crème, Sucre'),(8,1,'Mousse au chocolat','Dessert','Chocolat, Crème, Œufs, Sucre');
+INSERT INTO `recettes` VALUES (4,3,'Tomato BGA','Entrée','Tomatoes, Olive oil, Garlic, Basil, Bread'),(5,2,'Spaghetti Bolognese','Plat','Spaghetti, Ground beef, Tomato sauce, Garlic, Onion'),(6,4,'Mousse au chocolat ','Dessert','Chocolat noir, Crème, Sucre'),(9,4,'Tomato BA','Entrée',',fgbdjkrtherilse');
 /*!40000 ALTER TABLE `recettes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -81,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-08 11:34:05
+-- Dump completed on 2024-10-09 13:02:47
