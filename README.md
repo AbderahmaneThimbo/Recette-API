@@ -2,14 +2,13 @@
 
 ## Description
 
-Cette API permet de gérer des recettes culinaires, en fournissant des fonctionnalités CRUD (Create, Read, Update, Delete). Elle est construite avec **Express.js** et utilise **MySQL** pour la gestion de la base de données. Le projet inclut des tests unitaires, des outils d'analyse et de formatage de code (ESLint, Prettier), ainsi qu'une containerisation avec **Docker** pour le déploiement.
+Cette API permet de gérer des recettes culinaires, en fournissant des fonctionnalités CRUD (Create, Read, Update, Delete). Elle est construite avec **Express.js** et utilise **MySQL** pour la gestion de la base de données. Le projet inclut des tests unitaires, des outils d'analyse et de formatage de code (ESLint, Prettier).
 
 ## Objectifs
 
 - Développer et tester une API RESTful avec Express.js et MySQL.
 - Intégrer des outils d'analyse et de formatage de code.
-- Containeriser l'API avec Docker pour faciliter le déploiement.
-- Déployer l'API dans un environnement conteneurisé via DockerHub.
+
 
 ## Prérequis
 
@@ -52,8 +51,8 @@ Exemple de fichier `.env` :
 
 ```bash
 DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=motdepasse
+DB_USER=user
+DB_PASSWORD=password
 DB_NAME=gestion_recette
 ```
 
